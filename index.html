@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet" />
+  <title>Xzect</title>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <style>
+    .container-fluid {
+      background-color: black;
+      border: 3px;
+      border-color: aqua;
+      height: 60px;
+    }
+
+    .navbar-toggler-icon {
+      background-color: transparent;
+    }
+
+    body {
+      background-color: rgb(30, 34, 46);
+
+      background-image: url("https://github.com/Dhanashree0103/Xzect/blob/main/BGimage.jpg?raw=true");
+      background-repeat: no-repeat;
+      background-size: cover;
+      margin: 0%;
+      padding: 0%;
+      width: 100%;
+      height: 800px;
+    }
+
+    .cube {
+      width: 400px;
+      height: 400px;
+      position: relative;
+      margin: 50px auto;
+      transform-style: preserve-3d;
+      animation: spin 10s infinite linear;
+
+    }
+
+    .cube div {
+      position: absolute;
+      width: 400px;
+      height: 400px;
+      background-image: url("https://www.xzect.com/assets/images/xzect-logo.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+      opacity: 0.9;
+    }
+
+    .front {
+      transform: translateZ(200px);
+    }
+
+    .back {
+      transform: rotateY(180deg) translateZ(200px);
+    }
+
+    .right {
+      transform: rotateY(90deg) translateZ(200px);
+    }
+
+    .left {
+      transform: rotateY(-90deg) translateZ(200px);
+    }
+
+    .top {
+      transform: rotateX(90deg) translateZ(200px);
+    }
+
+    .bottom {
+      transform: rotateX(-90deg) translateZ(200px);
+    }
+
+    @keyframes spin {
+      0% {
+        transform: rotateX(0deg) rotateY(0deg);
+      }
+
+      100% {
+        transform: rotateX(360deg) rotateY(360deg);
+      }
+    }
+
+    .buttonContainer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .buttonContact {
+      display: inline-block;
+      width: 350px;
+      height: 50px;
+      text-align: center;
+      line-height: 50px;
+      font-size: 15px;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin-bottom: 5px;
+      margin-right: 10px;
+    }
+
+    .whatsapp-buttonContact {
+      background-color: rgb(5, 67, 60);
+      color: white;
+    }
+
+    .explore-buttonContact {
+      background-color: rgb(29, 34, 51);
+      color: white;
+    }
+
+    .content {
+      text-align: center;
+      color: white;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .card {
+      width: 18rem;
+      margin: 15px;
+      padding: 15px;
+      background-color: rgb(39, 44, 62);
+    }
+
+    .table-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .cards-table {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .sidebar {
+      color: black;
+    }
+
+    .tech-stack {
+      background-color: white;
+      padding: 20px;
+    }
+
+    .tech-tools {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .tt-card {
+      width: 200px;
+      height: 50px;
+      margin: 15px;
+      background-color: white;
+      border: none;
+      border-radius: 5px;
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+    }
+
+    .buttonOrange {
+      display: inline-block;
+      padding: 10px 20px;
+      border: 2px solid rgb(255, 95, 8);
+      border-radius: 5px;
+      color: rgb(255, 95, 8);
+      background-color: white;
+      transition: background-color 0.3s ease-in-out;
+      align-items: center;
+    }
+
+    .buttonOrange:hover {
+      background-color: rgb(255, 95, 8);
+      color: white;
+    }
+
+    .book-a-free-consultation {
+      background-image: url(" https://www.xzect.com/assets/images/patterns/ttten.svg");
+      height: 400px;
+    }
+
+    .color-changing-text {
+      font-size: 36px;
+      font-weight: bold;
+      background: linear-gradient(45deg, purple, blue);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: color-change 5s infinite;
+    }
+
+    .gradient-button {
+      background: linear-gradient(45deg, purple, blue);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: color-change 5s infinite;
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    @keyframes color-change {
+      0% {
+        background-position: 0% 50%;
+      }
+
+      50% {
+        background-position: 100% 50%;
+      }
+
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+    .lastGreyBlock {
+      background-color: rgb(30, 30, 30);
+
+    }
+
+    .lastTable {
+      table-layout: fixed;
+      width: 100%;
+      color: white;
+      margin: 100px;
+    }
+
+    .lastTable td {
+      width: 25%;
+      padding: 30px;
+      box-sizing: border-box;
+      vertical-align: top;
+    }
+
+    .button-container {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .logo-button {
+      width: 40px;
+      height: 40px;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      border: none;
+      cursor: pointer;
+    }
+
+    .logo-button.facebook {
+      background-image: url("https://www.edigitalagency.com.au/wp-content/uploads/Facebook-logo-blue-circle-large-white-f.png");
+    }
+
+    .logo-button.instagram {
+      background-image: url("https://www.citypng.com/public/uploads/preview/-11590304172n1klp7ohcb.png");
+    }
+
+    .logo-button.linkedin {
+      background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/LinkedIn_icon_circle.svg/1024px-LinkedIn_icon_circle.svg.png");
+    }
+
+    .logo-button.twitter {
+      background-image: url("https://cdn4.iconfinder.com/data/icons/social-media-icons-the-circle-set/48/twitter_circle-512.png");
+    }
+
+    .logo-button.youtube {
+      background-image: url("https://cdn4.iconfinder.com/data/icons/social-messaging-ui-color-shapes-2-free/128/social-youtube-circle-512.png");
+    }
+  </style>
+</head>
+
+<body class="p-3 m-0 border-0 bd-example m-0 border-0">
+  <div class="navbartop">
+    <nav class="navbar bg-body-tertiary fixed-top">
+      <div class="container-fluid">
+        <img class="logo" src="https://www.xzect.com/assets/images/xzect-logo.svg" style="height: 40px" />
+        <a class="navbar-brand" href="#">Xzect</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="Xzect">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="Xzect">Xzect</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item">
+                <h5>
+                  <b> <a class="nav-link active" aria-current="page">Popular</a><br></b>
+                </h5>
+                <h6>
+                  Magento Development<br>
+                  Wordpress Development<br>
+                  Ecommerce<br>
+                  Shopify<br>
+                  NFT<br>
+                  MVP<br>
+                  Drones<br>
+                  View all Popular<br></h6>
+
+              </li>
+
+              <br><br>
+              <br><br>
+
+
+              <li class="nav-item">
+                <h5><b>
+                    <a class="nav-link" href="#">Services</a></b></h5>
+                <h6>
+                  Software & App Development<br>
+                  Website Development & SEO<br>
+                  Cloud Services<br>
+                  Robotics & Automation<br>
+                  3D Printing & prototyping<br>
+                  Data Science & Analytics<br>
+                  AI & Machine Learning<br>
+                  IOT, AR & VR<br>
+                  Blockchain<br>
+                  Tech Consultancy<br>
+                  Research & Development<br>
+                  View all Services<br></h6>
+
+              </li>
+
+              <br><br>
+              <br><br>
+              <li class="nav-item">
+                <h5><b>
+                    <a class="nav-link" href="#">Industries</a></b></h5>
+                <h6>
+                  eCommerce<br>
+                  Hyperlocal<br>
+                  Healthcare<br>
+                  Finance<br>
+                  Education<br>
+                  Gaming<br>
+                  Social Networking<br>
+                  Agriculture<br>
+                  Travel & Aviation<br>
+                  Logistics<br>
+                  Restaurant<br>
+                  Real Estate<br>
+                  View all Industries<br>
+                </h6>
+              </li>
+              <br><br>
+              <br><br>
+              <li class="nav-item">
+                <h5><b>
+                    <a class="nav-link" href="#">Resources</a></b></h5>
+                <h6>
+                  About<br>
+                  Tech Stack<br>
+                  Contact Us<br>
+                  Careers<br>
+                  Webinars<br>
+                  Terms & Conditions<br>
+                  Privacy Policy<br>
+                  Legal Information<br>
+                  Blog<br>
+                  Youtube (@xzect_labs)<br>
+                  Github (@xzect)<br>
+                </h6>
+              </li>
+              </h6>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+
+  <table>
+    <tr>
+      <td style="padding: 50px;">
+        <h1 style="font-size:100px">
+          <span style="color: rgb(189, 16, 82);">Build,</span>
+          <span style="color: rgb(84, 95, 253);">test,</span>
+          <span style="color: rgb(162, 162, 162);">and</span><br>
+          <span style="color: rgb(1, 146, 103);">execute your <br> ideas</span>
+          <span style="color: rgb(162, 162, 162);">with our</span><br>
+          <span style="color: rgb(241, 174, 80);">innovative <br>solutions</span>
+          <span style="color: rgb(84, 95, 253);">.</span>
+        </h1>
+        <br>
+        <br>
+        <div class="buttonContainer">
+          <button class="buttonContact whatsapp-buttonContact"
+            onclick="window.location.href='https://wa.me/917972005145?text=Hi,%20Dhanashree,%20We%20really%20liked%20your%20work%20and%20would%20love%20to%20hire%20you!%20Best%20regards,Team%20Xzect.';">
+            <img
+              src="https://png.pngtree.com/png-vector/20221018/ourmid/pngtree-whatsapp-mobile-software-icon-png-image_6315991.png"
+              alt="WhatsApp Logo" width="30" height="30" style="vertical-align: middle; margin-right: 10px;">
+            Chat Now On WhatsApp
+          </button>
+          <button class="buttonContact explore-buttonContact">Explore Our Services</button>
+        </div>
+      </td>
+      <td style="padding: 70px;"></td>
+      <td style="padding: 70px;"></td>
+      <td style="padding: 70px;"></td>
+      <td style="padding: 50px;">
+        <div class="cube">
+          <div class="front"></div>
+          <div class="back"></div>
+          <div class="right"></div>
+          <div class="left"></div>
+          <div class="top"></div>
+          <div class="bottom"></div>
+        </div>
+      </td>
+    </tr>
+  </table>
+
+  <br>
+  <br>
+  <div class="content">
+    <h1 style="font-size: 50px;">Customised Solutions for All Your Business Needs</h1>
+    <p>Take Your Business to the Next Level with Our Industry-Leading Services</p>
+  </div>
+
+  <br><br>
+
+  <table class="cards-table">
+    <tr>
+
+      <td style="padding: 30px;">
+        <div class="card" style="width: 18rem;">
+          <img src="https://www.xzect.com/assets/images/services/software-and-app-dev.jpg " class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title" style="color:rgb(255, 255, 255);">Software & App Development</h5>
+            <a href="https://www.xzect.com/services/software-and-app-development" class="btn btn-primary">Get
+              Started</a>
+          </div>
+        </div>
+      </td>
+
+
+      <td style="padding: 30px;">
+        <div class="card" style="width: 18rem;">
+          <img src=" https://www.xzect.com/assets/images/services/website-dev-and-seo.jpg " class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title" style="color:rgb(255, 255, 255);">Website Development & SEO</h5>
+            <a href="https://www.xzect.com/services/website-development-and-seo" class="btn btn-primary">Get Started</a>
+          </div>
+        </div>
+      </td>
+
+
+      <td style="padding: 30px;">
+        <div class="card" style="width: 18rem;">
+          <img src="https://www.xzect.com/assets/images/services/cloud-services.jpg " class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title" style="color:rgb(255, 255, 255);">Cloud Services</h5>
+            <a href="https://www.xzect.com/services/cloud-services" class="btn btn-primary">Get Started</a>
+          </div>
+        </div>
+      </td>
+
+
+      <td style="padding: 30px;">
+        <div class="card" style="width: 18rem;">
+          <img src="https://www.xzect.com/assets/images/services/robotics.jpg " class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title" style="color:rgb(255, 255, 255);">Robotics & Automation</h5>
+            <a href="https://www.xzect.com/services/robotics-and-automation" class="btn btn-primary">Get Started</a>
+          </div>
+        </div>
+      </td>
+
+    </tr>
+
+
+    <tr>
+      <td style="padding: 30px;">
+        <div class="card" style="width: 18rem;">
+          <img src="https://www.xzect.com/assets/images/services/3d-printing-and-prototyping.jpg" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title" style="color:rgb(255, 255, 255);">3D Printing & Prototyping</h5>
+            <a href="https://www.xzect.com/services/3d-printing-and-prototyping" class="btn btn-primary">Get Started</a>
+          </div>
+        </div>
+      </td>
+
+      <td style="padding: 30px;">
+        <div class="card" style="width: 18rem;">
+          <img src="https://www.xzect.com/assets/images/services/data-science.jpg" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title" style="color:rgb(255, 255, 255);">Data Science & Analytics</h5>
+            <a href="https://www.xzect.com/services/data-science-and-analytics" class="btn btn-primary">Get Started</a>
+          </div>
+        </div>
+      </td>
+
+
+      <td style="padding: 30px;">
+        <div class="card" style="width: 18rem;">
+          <img src="https://www.xzect.com/assets/images/services/machine-learning.jpg" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title" style="color:rgb(255, 255, 255);">AI & Machine Learning</h5>
+            <a href="https://www.xzect.com/services/ai-and-machine-learning" class="btn btn-primary">Get Started</a>
+          </div>
+        </div>
+      </td>
+
+
+      <td style="padding: 30px;">
+        <div class="card" style="width: 18rem;">
+          <img src="https://www.xzect.com/assets/images/services/ar-vr.jpg" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title" style="color:rgb(255, 255, 255);">IOT,AR & VR</h5>
+            <a href="https://www.xzect.com/services/iot-ar-vr" class="btn btn-primary">Get Started</a>
+          </div>
+        </div>
+      </td>
+    </tr>
+
+    <tr>
+      <td style="padding: 30px;">
+        <div class="card" style="width: 18rem;">
+          <img src="https://www.xzect.com/assets/images/services/blockchain.jpg" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title" style="color:rgb(255, 255, 255);">Blockchain</h5>
+            <a href="https://www.xzect.com/services/blockchain-development" class="btn btn-primary">Get Started</a>
+          </div>
+        </div>
+      </td>
+
+
+      <td style="padding: 30px;">
+        <div class="card" style="width: 18rem;">
+          <img src="https://www.xzect.com/assets/images/services/tech-consultancy.jpg" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title" style="color:rgb(255, 255, 255);">Tech Consultancy</h5>
+            <a href="https://www.xzect.com/services/tech-consultancy" class="btn btn-primary">Get Started</a>
+          </div>
+        </div>
+      </td>
+
+
+      <td style="padding: 30px;">
+        <div class="card" style="width: 18rem;">
+          <img src="https://www.xzect.com/assets/images/services/research-and-dev.jpg" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title" style="color:rgb(255, 255, 255);">Research And Development</h5>
+            <a href="https://www.xzect.com/services/research-and-development" class="btn btn-primary">Get Started</a>
+          </div>
+        </div>
+
+    </tr>
+    </td>
+    </tr>
+  </table>
+
+  <section class="tech-stack">
+    <div class="containerbottom">
+      <h2 class="section-h2">Leverage our software &amp; hardware expertise </h2>
+      <p class="section-p">Use our services and tech expertise to create disruptive products &amp; solutions that can
+        revolutionize your business and stay ahead with evolving technological advancements.</p>
+
+      <div class="tech-tools">
+
+
+        <div class="tech-tools">
+          <a class="tt-card">
+            <div class="tt-card-image"><img src="https://www.xzect.com/assets/images/icons/tech-stack/cpp.png"
+                style="height: 40px;" width="40px"></div>
+            <div class="tt-card-title">C++</div>
+          </a>
+          <a class="tt-card">
+            <div class="tt-card-image"><img src="https://www.xzect.com/assets/images/icons/tech-stack/python.png"
+                style="height: 40px;" width="40px"></div>
+            <div class="tt-card-title">Python</div>
+          </a>
+          <a class="tt-card">
+            <div class="tt-card-image"><img src="https://www.xzect.com/assets/images/icons/tech-stack/golang.png"
+                style="height: 40px;" width="40px"></div>
+            <div class="tt-card-title">Golang</div>
+          </a>
+          <a class="tt-card">
+            <div class="tt-card-image"><img src="https://www.xzect.com/assets/images/icons/tech-stack/rust.png"
+                style="height: 40px;" width="40px">
+            </div>
+            <div class="tt-card-title">Rust</div>
+          </a><a class="tt-card">
+            <div class="tt-card-image"><img src="https://www.xzect.com/assets/images/icons/tech-stack/nodejs.png"
+                style="height: 40px;" width="40px">
+            </div>
+            <div class="tt-card-title">Nodejs</div>
+          </a><a class="tt-card">
+            <div class="tt-card-image"><img src="https://www.xzect.com/assets/images/icons/tech-stack/react.png"
+                style="height: 40px;" width="40px">
+            </div>
+            <div class="tt-card-title">Reactjs</div>
+          </a><a class="tt-card">
+            <div class="tt-card-image"><img src="https://www.xzect.com/assets/images/icons/tech-stack/angular.png"
+                style="height: 40px;" width="40px">
+            </div>
+            <div class="tt-card-title">Angular</div>
+          </a><a class="tt-card">
+            <div class="tt-card-image"><img src="https://www.xzect.com/assets/images/icons/tech-stack/vuejs.png"
+                style="height: 40px;" width="40px">
+            </div>
+            <div class="tt-card-title">Vuejs</div>
+          </a><a class="tt-card">
+            <div class="tt-card-image"><img src="https://www.xzect.com/assets/images/icons/tech-stack/android.png"
+                style="height: 40px;" width="40px">
+            </div>
+            <div class="tt-card-title">Android</div>
+          </a><a class="tt-card">
+            <div class="tt-card-image"><img src="https://www.xzect.com/assets/images/icons/tech-stack/swift.png"
+                style="height: 40px;" width="40px">
+            </div>
+            <div class="tt-card-title">Swift</div>
+          </a><a class="tt-card">
+            <div class="tt-card-image"><img src="https://www.xzect.com/assets/images/icons/tech-stack/wordpress.png"
+                style="height: 40px;" width="40px"></div>
+            <div class="tt-card-title">Wordpress</div>
+          </a><a class="tt-card">
+            <div class="tt-card-image"><img src="https://www.xzect.com/assets/images/icons/tech-stack/magento.png"
+                style="height: 40px;" width="40px">
+            </div>
+            <div class="tt-card-title">Magento</div>
+          </a><a class="tt-card">
+            <div class="tt-card-image"><img src="https://www.xzect.com/assets/images/icons/tech-stack/laravel.png"
+                style="height: 40px;" width="40px">
+            </div>
+            <div class="tt-card-title">Laravel</div>
+          </a><a class="tt-card">
+            <div class="tt-card-image"><img src="https://www.xzect.com/assets/images/icons/tech-stack/codeigniter.png"
+                style="height: 40px;" width="40px"></div>
+            <div class="tt-card-title">Codeigniter</div>
+          </a><a class="tt-card">
+            <div class="tt-card-image"><img src="https://www.xzect.com/assets/images/icons/tech-stack/codeigniter.png"
+                style="height: 40px;" width="40px"></div>
+            <div class="tt-card-title">Django</div>
+          </a><a class="tt-card">
+            <div class="tt-card-image"><img src="https://www.xzect.com/assets/images/icons/tech-stack/solidity.png"
+                style="height: 40px;" width="40px"></div>
+            <div class="tt-card-title">Solidity</div>
+          </a><a class="tt-card">
+            <div class="tt-card-image"><img src="https://www.xzect.com/assets/images/icons/tech-stack/flutter.png"
+                style="height: 40px;" width="40px">
+            </div>
+            <div class="tt-card-title">Flutter</div>
+          </a><a class="tt-card">
+            <div class="tt-card-image"><img src="https://www.xzect.com/assets/images/icons/tech-stack/mysql.png"
+                style="height: 40px;" width="40px">
+            </div>
+            <div class="tt-card-title">MySQL</div>
+          </a><a class="tt-card">
+            <div class="tt-card-image"><img src="https://www.xzect.com/assets/images/icons/tech-stack/mongodb.png"
+                style="height: 40px;" width="40px">
+            </div>
+            <div class="tt-card-title">MongoDB</div>
+          </a><a class="tt-card">
+            <div class="tt-card-image"><img src="https://www.xzect.com/assets/images/icons/tech-stack/graphql.png"
+                style="height: 40px;" width="40px">
+            </div>
+            <div class="tt-card-title">GraphQL</div>
+          </a><a class="tt-card">
+            <div class="tt-card-image"><img src="https://www.xzect.com/assets/images/icons/tech-stack/docker.png"
+                style="height: 40px;" width="40px">
+            </div>
+            <div class="tt-card-title">Docker</div>
+          </a><a class="tt-card">
+            <div class="tt-card-image"><img src="https://www.xzect.com/assets/images/icons/tech-stack/nginx.png"
+                style="height: 40px;" width="40px">
+            </div>
+            <div class="tt-card-title">Nginx</div>
+          </a><a class="tt-card">
+            <div class="tt-card-image"><img src="https://www.xzect.com/assets/images/icons/tech-stack/ubuntu.png"
+                style="height: 40px;" width="40px">
+            </div>
+            <div class="tt-card-title">Ubuntu</div>
+          </a><a class="tt-card">
+            <div class="tt-card-image"><img src="https://www.xzect.com/assets/images/icons/tech-stack/tensorflow.png"
+                style="height: 40px;" width="40px"></div>
+            <div class="tt-card-title">Tensorflow</div>
+          </a><a class="tt-card">
+            <div class="tt-card-image"><img src="https://www.xzect.com/assets/images/icons/tech-stack/keras.png"
+                style="height: 40px;" width="40px">
+            </div>
+            <div class="tt-card-title">Keras</div>
+          </a><a class="tt-card">
+            <div class="tt-card-image"><img src="https://www.xzect.com/assets/images/icons/tech-stack/opencv.png"
+                style="height: 40px;" width="40px">
+            </div>
+            <div class="tt-card-title">OpenCV</div>
+          </a><a class="tt-card">
+            <div class="tt-card-image"><img src="https://www.xzect.com/assets/images/icons/tech-stack/arduino.png"
+                style="height: 40px;" width="40px">
+            </div>
+            <div class="tt-card-title">Arduino</div>
+          </a><a class="tt-card">
+            <div class="tt-card-image"><img src="https://www.xzect.com/assets/images/icons/tech-stack/ros.png"
+                style="height: 40px;" width="40px">
+            </div>
+            <div class="tt-card-title">ROS</div>
+          </a>
+        </div>
+        <button class="buttonOrange">Explore Our Entire Tech Stack</button>
+      </div>
+  </section>
+  <br>
+  <section class="book-a-free-consultation">
+    <center>
+      <div style="color: white;">
+        <h1 style="font-size:50px"> Innovate. Validate. Launch </h1>
+      </div>
+      <br>
+      <br>
+      <section class="color-changing-text">
+        <div style="color: white;">
+          <h1 style="font-size:50px"> Let‘s transform your idea into reality with our MVP development services.
+            <br>
+        </div>
+        <button class="gradient-button">Book a Free Consultation!</button>
+    </center>
+  </section>
+
+  <section class="lastGreyBlock">
+    <table class="lastTable">
+      <tr>
+        <td>
+          <h5><b>Xzect Labs Pvt. Ltd.</b></h5>
+          <br><br>
+          <h6>
+            Xzect provides a diverse array of services that enable both businesses and <br><br>
+            individuals to bring their vision to life . Our specialties include software <br><br>
+            development, website design and SEO, cloud services, robotics and <br><br>
+            automation, 3D printing and prototyping, data science and analytics, <br><br>
+            AI and machine learning, IOT, AR and VR, blockchain, and other tech-related <br><br>
+            services. Our team of experienced professionals is available to assist with <br><br>
+            the design and development of new products, exploration of robotics and <br><br>
+            automation possibilities, or any other requirements.<br><br>
+            Registered Address: 203, 2-A/3, Asaf Ali Road, Delhi - 110002
+            <br><br>
+            CIN: U72200DL2022PTC408714
+            <br><br>
+            GST: 07AAACX4373J1Z2
+            <br><br>
+          </h6>
+
+          <br>
+          <br>
+          <br>
+          <br>
+          <div class="button-container">
+            <button class="logo-button facebook"></button>
+            <button class="logo-button instagram"></button>
+            <button class="logo-button linkedin"></button>
+            <button class="logo-button twitter"></button>
+            <button class="logo-button youtube"></button>
+          </div>
+        </td>
+        <td>
+          <h5><b>Services </b></h5>
+          <br><br>
+          <h6>
+            Software & App Development<br><br>
+            Website Development & SEO<br><br>
+            Cloud Services<br><br>
+            Robotics & Automation<br><br>
+            3D Printing & prototyping<br><br>
+            Data Science & Analytics<br><br>
+            AI & Machine Learning<br><br>
+            IOT, AR & VR<br><br>
+            Blockchain<br><br>
+            Tech Consultancy<br><br>
+            Research & Development<br><br>
+            View all Services<br><br></h6>
+        </td>
+        <td>
+          <h5><b> Industries </b></h5>
+          <br><br>
+          <h6>
+            eCommerce<br><br>
+            Hyperlocal<br><br>
+            Healthcare<br><br>
+            Finance<br><br>
+            Education<br><br>
+            Gaming<br><br>
+            Social Networking<br><br>
+            Agriculture<br><br>
+            Travel & Aviation<br><br>
+            Logistics<br><br>
+            Restaurant<br><br>
+            Real Estate<br><br>
+            View all Industries<br><br>
+          </h6>
+        </td>
+        <td>
+          <h5><b>Resources </b></h5>
+          <br><br>
+          <h6>
+            About<br><br>
+            Tech Stack<br><br>
+            Contact Us<br><br>
+            Careers<br><br>
+            Webinars<br><br>
+            Terms & Conditions<br><br>
+            Privacy Policy<br><br>
+            Legal Information<br><br>
+            Blog<br><br>
+            Youtube (@xzect_labs)<br><br>
+            Github (@xzect)<br><br>
+          </h6>
+        </td>
+      </tr>
+    </table>
+  </section>
+</body>
+
+</html>
